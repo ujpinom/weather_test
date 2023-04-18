@@ -21,6 +21,6 @@ jobs:
     #  run: yarn install && npm run-script build
     
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync ./public/ s3://${{ secrets.AWS_S3_BUCKET }}/api_results/ 
+      run: aws s3 sync ./public/ s3://${{ secrets.AWS_S3_BUCKET }}/metadata_api/ 
       # --delete flag will remove any file in the s3 that are not on the "thefoldertodeploy" folder
 
